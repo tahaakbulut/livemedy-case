@@ -1,0 +1,137 @@
+$orange: #e54c3c;
+
+.logo {
+  width: 210px;
+
+  @media (min-width: 992px) {
+    width: 241px;
+  }
+}
+.search {
+  position: relative;
+  height: 40px;
+  width: 230px;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
+
+  @media (min-width: 992px) {
+    width: 384px;
+    height: 47px;
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+    border-radius: 47px;
+    border: 1px solid #aaaaaa;
+    padding-left: 34px;
+    padding-right: 16px;
+    color: #3b3b3b;
+    outline: none;
+    font-size: 12px;
+    font-weight: 500;
+
+    @media (min-width: 992px) {
+      padding-left: 56px;
+      padding-right: 34px;
+      font-size: 13px;
+    }
+
+    &::placeholder {
+      opacity: 0.9;
+      font-weight: 500;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50% - 1px));
+    left: 16px;
+    line-height: 1;
+
+    @media (min-width: 992px) {
+      left: 34px;
+    }
+  }
+}
+
+.language {
+  font-size: 12px;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
+
+  button[data-bs-toggle='dropdown'] {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 60px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  ul {
+    min-width: 60px;
+  }
+
+  img {
+    height: auto;
+  }
+}
+
+.notification {
+  position: relative;
+  border: 1px solid #ced4da;
+  outline: none;
+  font-size: 10px;
+  color: #666666;
+
+  @media (min-width: 992px) {
+    font-size: 12px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    opacity: 0;
+    background-color: $orange;
+  }
+
+  &:focus {
+    background-color: transparent;
+    color: #666666;
+  }
+
+  &.shown::before {
+    opacity: 1;
+  }
+}
+
+.profile {
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @media (min-width: 992px) {
+    font-size: 12px;
+  }
+}

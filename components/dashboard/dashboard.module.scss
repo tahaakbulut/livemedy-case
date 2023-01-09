@@ -1,0 +1,11 @@
+.content {
+  margin-top: 100px;
+  @media (min-width: 768px) {
+    margin-top: 0;
+    margin-left: 24px;
+    width: calc(100% - 230px - 24px);
+  }
+  @media (min-width: 1024px) {
+    width: calc(100% - 305px - 24px);
+  }
+}
