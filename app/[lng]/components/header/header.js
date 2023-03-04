@@ -1,13 +1,13 @@
+'use client';
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { languageList, useBase, user } from '../../contexts/base-context';
+import { user } from '../../../../contexts/base-data';
 import { IoSearch } from 'react-icons/io5';
 import { FaBell } from 'react-icons/fa';
 import styles from './header.module.scss';
 
 function Header() {
-  const { setLang, selectedLang } = useBase();
   const [notification, setNotification] = useState(true);
 
   const showNotification = () => {
@@ -49,7 +49,7 @@ function Header() {
       </Link>
 
       {/* Language*/}
-      <div className={`${styles.language} dropdown ms-2`}>
+      {/* <div className={`${styles.language} dropdown ms-2`}>
         <button
           className="btn dropdown-toggle d-flex align-items-center"
           type="button"
@@ -77,7 +77,7 @@ function Header() {
               ),
           )}
         </ul>
-      </div>
+      </div> */}
       {/* Language End*/}
     </header>
   );

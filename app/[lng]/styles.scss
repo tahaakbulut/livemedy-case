@@ -1,0 +1,10 @@
+$min-contrast-ratio: 1;
+$orange: #e54c3c;
+$primary: $orange;
+
+@import '~bootstrap/scss/bootstrap';
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+}

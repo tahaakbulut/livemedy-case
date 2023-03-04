@@ -1,11 +1,13 @@
-import Sidebar from '../sidebar/sidebar';
+'use client';
+import Sidebar from '../components/sidebar';
 import styles from './dashboard.module.scss';
 
-function Dashboard({ children }) {
+function Dashboard({ children, params: { lng } }) {
+  console.log(lng, 'layout');
   return (
     <div className="container pt-5">
       <div className="row align-items-start">
-        <Sidebar />
+        <Sidebar lng={lng} />
         <div className={styles.content}>{children}</div>
       </div>
     </div>

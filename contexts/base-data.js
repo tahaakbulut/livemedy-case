@@ -1,10 +1,3 @@
-'use client';
-
-import React, { useContext, useState } from 'react';
-
-const BaseContext = React.createContext();
-export const useBase = () => useContext(BaseContext);
-
 export const languageList = [
   { key: 'TR', icon: '/flag/TR.png' },
   { key: 'EN', icon: '/flag/EN.png' },
@@ -30,14 +23,4 @@ export const user = {
     { id: 0, name: 'Award', from: 'Kuruluş Adı', date: 'Şubat 2020' },
     { id: 1, name: 'Award', from: 'Kuruluş Adı', date: 'Mayıs 2023' },
   ],
-};
-
-export const BaseProvider = ({ children }) => {
-  const [selectedLang, setSelectedLang] = useState(languageList[0]);
-
-  const setLang = (lang) => {
-    setSelectedLang({ ...lang });
-  };
-
-  return <BaseContext.Provider value={{ selectedLang, setLang }}>{children}</BaseContext.Provider>;
 };
